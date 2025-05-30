@@ -66,7 +66,7 @@ function enviarFormulario() {
 
 // Función para cargar y mostrar registros (opcional)
 function cargarRegistros() {
-  fetch('http://localhost:3000/registros')
+  fetch('https://back-marcaciones.vercel.app/registros')
     .then(response => response.json())
     .then(data => {
       console.log('Registros cargados:', data);
