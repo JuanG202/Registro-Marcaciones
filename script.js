@@ -27,7 +27,7 @@ function enviarFormulario() {
 
   console.log('Enviando datos:', datos);
 
-  fetch('http://localhost:3000/registrar', {
+  fetch('https://back-marcaciones.vercel.app/registrar', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
