@@ -43,9 +43,7 @@ function enviarFormulario() {
   .then(data => {
     if (data.success) {
       let mensaje = data.message + "\n\n";
-      mensaje += "Enlaces:\n";
-      mensaje += "- Archivo Excel: " + data.urls.archivo + "\n";
-      mensaje += "- Carpeta Drive: " + data.urls.carpeta;
+      mensaje += "Enlace al archivo Excel: " + data.urls.archivo;
       
       alert(mensaje);
       document.getElementById('formularioAseo').reset();
