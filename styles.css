@@ -156,6 +156,20 @@ input[type="date"]:focus {
     box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
 }
 
+.nota-creador {
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  color: gray;
+  text-align: left;
+  position: fixed;
+  bottom: 10px;
+  margin-top: 10px;
+  left: 10px;
+  padding: 5px;
+  z-index: 1000;
+}
+
+
 /* Estilos responsivos */
 @media (max-width: 480px) {
     .card {
@@ -176,6 +190,15 @@ input[type="date"]:focus {
     .enviar button {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+    .nota-creador {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+        background: transparent;
+        padding: 0;
+        color: gray;
+        opacity: 0.4;
     }
 }
 

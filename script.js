@@ -42,7 +42,12 @@ function enviarFormulario() {
   })
   .then(data => {
     if (data.success) {
-      alert("Registro guardado correctamente.");
+      let mensaje = data.message + "\n\n";
+      mensaje += "Enlaces:\n";
+      mensaje += "- Archivo Excel: " + data.urls.archivo + "\n";
+      mensaje += "- Carpeta Drive: " + data.urls.carpeta;
+      
+      alert(mensaje);
       document.getElementById('formularioAseo').reset();
     } else {
       throw new Error(data.message || 'Error al guardar el registro');
@@ -68,4 +73,4 @@ function cargarRegistros() {
       // Aquí puedes agregar código para mostrar los registros en tu página
     })
     .catch(error => console.error('Error al cargar registros:', error));
-}
+} 
